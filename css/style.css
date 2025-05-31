@@ -1,0 +1,199 @@
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #000;
+    font-weight: bold;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.artwork img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+.text p {
+    font-size: 1.2em;
+    color: #444;
+    margin: 0;
+}
+
+.source {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 15px;
+    font-style: normal;
+}
+
+/* Add specific styling for quote source to match artwork source */
+#quote-source {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 25px;
+    font-style: normal;
+}
+
+.controls {
+    text-align: center;
+}
+
+.controls button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #555;
+}
+
+.about-text h1 {
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+#saved-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.saved-pairing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.saved-pairing:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.saved-pairing img {
+    max-width: 100%;
+    border: 1px solid #eee;
+}
+
+.saved-pairing .text p {
+    font-size: 1.1em;
+}
+
+.saved-pairing .source {
+    font-size: 0.8em;
+}
+
+/* quote */
+.pull-quote {
+  position: relative;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  padding: 2rem 2rem 2rem 3rem;
+  border-left: 4px solid #888;
+  color: #ccc;
+}
+
+.pull-quote::before,
+.pull-quote::after {
+  font-family: serif;
+  font-size: 3rem;
+  color: #888;
+  position: absolute;
+}
+
+.pull-quote::before {
+  content: "“";
+  left: 0;
+  top: -0.5rem;
+}
+
+.pull-quote cite {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-style: normal;
+  color: #888;
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container, #saved-container .saved-pairing {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .artwork {
+        margin-bottom: 20px;
+    }
+
+    /* Remove extra margin for quote source on mobile */
+    #quote-source {
+        margin-top: 15px;
+    }
+}
